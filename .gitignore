@@ -1,5 +1,13 @@
 .idea
+*.class
+/res
+/outImages
+/out
+
+
 res/
+
 outImages/
+
 out/
 
