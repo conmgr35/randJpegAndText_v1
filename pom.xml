@@ -8,5 +8,18 @@
     <artifactId>randJpegAndText_v1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>me.xdrop</groupId>
+            <artifactId>jrand</artifactId>
+            <version>0.2.5-alpha</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
