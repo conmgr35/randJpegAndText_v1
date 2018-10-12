@@ -1,5 +1,6 @@
 .idea
-*/class
+*.class
+*.jpg
 res/**
 outImages/**
 out/**
