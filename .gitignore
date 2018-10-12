@@ -1,13 +1,7 @@
 .idea
 *.class
-/res
-/outImages
-/out
-
-
-res/
-
-outImages/
-
-out/
+*.jpg
+res/**
+outImages/**
+out/**
 
