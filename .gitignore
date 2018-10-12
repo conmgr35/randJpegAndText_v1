@@ -1,5 +1,6 @@
 .idea
-res/
-outImages/
-out/
+*/class
+res/**
+outImages/**
+out/**
 
