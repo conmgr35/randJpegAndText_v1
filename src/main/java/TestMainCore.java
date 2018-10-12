@@ -91,13 +91,17 @@ class PositionOnBoard {
                                     isFreeSpaceOnBoard[i + 1][j + 1] == false) {
                                 System.out.println("good");
                                 if ((((9 - (i + 1)) >= 2) && ((9 - (j + 1)) >= 2)) || (((9 - (i + 1)) == 0) || ((9 - (j + 1)) == 0))) {
-                                    isFreeSpaceOnBoard[i][j] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 0] = true;
-                                    isFreeSpaceOnBoard[i + 0][j + 1] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 1] = true;
+                                    if (((i > 0) && (isFreeSpaceOnBoard[i - 1][j]) == true) || i == 0) {
+                                        if (((j > 0) && (isFreeSpaceOnBoard[i][j - 1]) == true) || j == 0) {
+                                            isFreeSpaceOnBoard[i][j] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 0] = true;
+                                            isFreeSpaceOnBoard[i + 0][j + 1] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 1] = true;
 
-                                    arrayBlock.add(new Block(i * 200, j * 200, (i + 1) * 200, (j + 1) * 200));
-                                    return;
+                                            arrayBlock.add(new Block(i * 200, j * 200, (i + 1) * 200, (j + 1) * 200));
+                                            return;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -117,20 +121,24 @@ class PositionOnBoard {
                                     isFreeSpaceOnBoard[i + 2][j + 2] == false) {
                                 System.out.println("good");
                                 if ((((9 - (i + 2)) >= 2) && ((9 - (j + 2)) >= 2)) || (((9 - (i + 2)) == 0) || ((9 - (j + 2)) == 0))) {
-                                    isFreeSpaceOnBoard[i][j] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 0] = true;
-                                    isFreeSpaceOnBoard[i + 0][j + 1] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 1] = true;
-                                    isFreeSpaceOnBoard[i + 2][j + 0] = true;
-                                    isFreeSpaceOnBoard[i + 2][j + 1] = true;
-                                    isFreeSpaceOnBoard[i + 0][j + 2] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 2] = true;
-                                    isFreeSpaceOnBoard[i + 2][j + 2] = true;
+                                    if (((i > 0) && (isFreeSpaceOnBoard[i - 1][j]) == true) || i == 0) {
+                                        if (((j > 0) && (isFreeSpaceOnBoard[i][j - 1]) == true) || j == 0) {
+
+                                            isFreeSpaceOnBoard[i][j] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 0] = true;
+                                            isFreeSpaceOnBoard[i + 0][j + 1] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 1] = true;
+                                            isFreeSpaceOnBoard[i + 2][j + 0] = true;
+                                            isFreeSpaceOnBoard[i + 2][j + 1] = true;
+                                            isFreeSpaceOnBoard[i + 0][j + 2] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 2] = true;
+                                            isFreeSpaceOnBoard[i + 2][j + 2] = true;
 
 
-                                    arrayBlock.add(new Block(i * 200, j * 200, (i + 2) * 200, (j + 2) * 200));
-                                    return;
-
+                                            arrayBlock.add(new Block(i * 200, j * 200, (i + 2) * 200, (j + 2) * 200));
+                                            return;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -152,23 +160,27 @@ class PositionOnBoard {
                                     isFreeSpaceOnBoard[i + 2][j + 3] == false) {
                                 System.out.println("good");
                                 if ((((9 - (i + 2)) >= 2) && ((9 - (j + 3)) >= 2)) || (((9 - (i + 2)) == 0) || ((9 - (j + 3)) == 0))) {
-                                    isFreeSpaceOnBoard[i][j] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 0] = true;
-                                    isFreeSpaceOnBoard[i + 0][j + 1] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 1] = true;
-                                    isFreeSpaceOnBoard[i + 2][j + 0] = true;
-                                    isFreeSpaceOnBoard[i + 2][j + 1] = true;
-                                    isFreeSpaceOnBoard[i + 0][j + 2] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 2] = true;
-                                    isFreeSpaceOnBoard[i + 2][j + 2] = true;
-                                    isFreeSpaceOnBoard[i + 0][j + 3] = true;
-                                    isFreeSpaceOnBoard[i + 1][j + 3] = true;
-                                    isFreeSpaceOnBoard[i + 2][j + 3] = true;
+                                    if (((i > 0) && (isFreeSpaceOnBoard[i - 1][j]) == true) || i == 0) {
+                                        if (((j > 0) && (isFreeSpaceOnBoard[i][j - 1]) == true) || j == 0) {
+
+                                            isFreeSpaceOnBoard[i][j] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 0] = true;
+                                            isFreeSpaceOnBoard[i + 0][j + 1] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 1] = true;
+                                            isFreeSpaceOnBoard[i + 2][j + 0] = true;
+                                            isFreeSpaceOnBoard[i + 2][j + 1] = true;
+                                            isFreeSpaceOnBoard[i + 0][j + 2] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 2] = true;
+                                            isFreeSpaceOnBoard[i + 2][j + 2] = true;
+                                            isFreeSpaceOnBoard[i + 0][j + 3] = true;
+                                            isFreeSpaceOnBoard[i + 1][j + 3] = true;
+                                            isFreeSpaceOnBoard[i + 2][j + 3] = true;
 
 
-                                    arrayBlock.add(new Block(i * 200, j * 200, (i + 2) * 200, (j + 3) * 200));
-                                    return;
-
+                                            arrayBlock.add(new Block(i * 200, j * 200, (i + 2) * 200, (j + 3) * 200));
+                                            return;
+                                        }
+                                    }
                                 }
                             }
                         }
