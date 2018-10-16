@@ -7,24 +7,30 @@ public class TestMainPositionPx {
     public static void main(String[] args) {
         CorePosition corePosition = new CorePosition();
 
-        int sum = 1000 * 1000;
-        ArrayList<Blockk> blocks = new ArrayList<>();
-        while (sum > 0) {
-            int rand = 0;
+
+        int sumWidth = 1000, sumHeight = 1000;
+//        ArrayList<Blockk> blocks = new ArrayList<>();
+        while (sumWidth > 0 && sumWidth > 0) {
+            int randWidth = 0, randHeight = 0;
             int randInt = JRand.natural().min(1).max(3).gen();
             switch (randInt) {
                 case 1:
-                    rand = 200 * 200;
+                    randHeight = 200;
+                    randWidth = 200;
                     break;
                 case 2:
-                    rand = 400 * 400;
+                    randHeight = 400;
+                    randWidth = 400;
                     break;
                 case 3:
-                    rand = 400 * 600;
+                    randHeight = 400;
+                    randWidth = 600;
                     break;
             }
-            if (((rand < sum) && (sum - rand > 40000)) || (sum - rand == 0)) {
-                sum -= rand;
+            if ((((randHeight < sumHeight) && (randWidth < sumWidth)) && ((randHeight < 200) && (randWidth < 200))) || ((sumWidth - randWidth == 0) && (sumHeight - randHeight == 0))) {
+                System.out.println(randHeight+" "+randWidth);
+                sumHeight -= randHeight;
+                sumWidth -= randWidth;
                 switch (randInt) {
                     case 1:
                         corePosition.calcPosition(200, 200);
@@ -53,9 +59,9 @@ public class TestMainPositionPx {
 //        corePosition.calcPosition(400, 400);
 //        corePosition.calcPosition(200, 200);
         corePosition.seeArray();
-        for (Blockk bk : blocks) {
-            System.out.println(bk.toString());
-        }
+//        for (Blockk bk : blocks) {
+//            System.out.println(bk.toString());
+//        }
 
 
     }
