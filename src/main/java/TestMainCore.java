@@ -32,13 +32,13 @@ public class TestMainCore {
 
 }
 
-class Block {
+class Blockk {
     private int startX;
     private int startY;
     private int endX;
     private int endY;
 
-    public Block(int startX, int startY, int endX, int endY) {
+    public Blockk(int startX, int startY, int endX, int endY) {
         this.startX = startX;
         this.startY = startY;
         this.endX = endX;
@@ -74,7 +74,7 @@ class Block {
 
 class PositionOnBoard {
     private boolean[][] isFreeSpaceOnBoard = new boolean[10][10];
-    private ArrayList<Block> arrayBlock = new ArrayList<Block>();
+    private ArrayList<Blockk> arrayBlock = new ArrayList<Blockk>();
 
     public void getFreeSpace(int height, int width) {
         int w = width / 200;
@@ -98,7 +98,7 @@ class PositionOnBoard {
                                             isFreeSpaceOnBoard[i + 0][j + 1] = true;
                                             isFreeSpaceOnBoard[i + 1][j + 1] = true;
 
-                                            arrayBlock.add(new Block(i * 200, j * 200, (i + 1) * 200, (j + 1) * 200));
+                                            arrayBlock.add(new Blockk(i * 200, j * 200, (i + 1) * 200, (j + 1) * 200));
                                             return;
                                         }
                                     }
@@ -135,7 +135,7 @@ class PositionOnBoard {
                                             isFreeSpaceOnBoard[i + 2][j + 2] = true;
 
 
-                                            arrayBlock.add(new Block(i * 200, j * 200, (i + 2) * 200, (j + 2) * 200));
+                                            arrayBlock.add(new Blockk(i * 200, j * 200, (i + 2) * 200, (j + 2) * 200));
                                             return;
                                         }
                                     }
@@ -177,7 +177,7 @@ class PositionOnBoard {
                                             isFreeSpaceOnBoard[i + 2][j + 3] = true;
 
 
-                                            arrayBlock.add(new Block(i * 200, j * 200, (i + 2) * 200, (j + 3) * 200));
+                                            arrayBlock.add(new Blockk(i * 200, j * 200, (i + 2) * 200, (j + 3) * 200));
                                             return;
                                         }
                                     }
@@ -199,7 +199,7 @@ class PositionOnBoard {
 
     }
 
-    public ArrayList<Block> getArrayBlock() {
+    public ArrayList<Blockk> getArrayBlock() {
         return arrayBlock;
     }
 
