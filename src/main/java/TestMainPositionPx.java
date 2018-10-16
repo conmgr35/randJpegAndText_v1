@@ -5,53 +5,57 @@ import java.util.stream.Stream;
 
 public class TestMainPositionPx {
     public static void main(String[] args) {
-
-//        int sum = 1000 * 1000;
-//        ArrayList<Blockk> blocks = new ArrayList<>();
-//        while (sum > 0) {
-//            int rand = 0;
-//            int randInt = JRand.natural().min(1).max(3).gen();
-//            switch (randInt) {
-//                case 1:
-//                    rand = 200 * 200;
-//                    break;
-//                case 2:
-//                    rand = 400 * 400;
-//                    break;
-//                case 3:
-//                    rand = 400 * 600;
-//                    break;
-//            }
-//            if (((rand < sum) && (sum - rand > 40000)) || (sum - rand == 0)) {
-//                sum -= rand;
-//                switch (randInt) {
-//                    case 1:
-//                        blocks.add(new Blockk(0, 0, 200, 200));
-//                        break;
-//                    case 2:
-//                        blocks.add(new Blockk(0, 0, 400, 400));
-//                        break;
-//                    case 3:
-//                        blocks.add(new Blockk(0, 0, 400, 600));
-//                        break;
-//                }
-//            }
-//
-//
-//        }
-
         CorePosition corePosition = new CorePosition();
 
-        corePosition.calcPosition(200, 200);
-        corePosition.calcPosition(200, 200);
+        int sum = 1000 * 1000;
+        ArrayList<Blockk> blocks = new ArrayList<>();
+        while (sum > 0) {
+            int rand = 0;
+            int randInt = JRand.natural().min(1).max(3).gen();
+            switch (randInt) {
+                case 1:
+                    rand = 200 * 200;
+                    break;
+                case 2:
+                    rand = 400 * 400;
+                    break;
+                case 3:
+                    rand = 400 * 600;
+                    break;
+            }
+            if (((rand < sum) && (sum - rand > 40000)) || (sum - rand == 0)) {
+                sum -= rand;
+                switch (randInt) {
+                    case 1:
+                        corePosition.calcPosition(200, 200);
+                        break;
+                    case 2:
+                        corePosition.calcPosition(400, 400);
+                        break;
+                    case 3:
+                        corePosition.calcPosition(400, 600);
+                        break;
+                }
+            }
 
+
+        }
+
+
+//        corePosition.calcPosition(200, 200);
+//        corePosition.calcPosition(200, 200);
+//
 //        corePosition.calcPosition(200, 200);
 //        corePosition.calcPosition(400, 400);
 //        corePosition.calcPosition(400, 600);
+//        corePosition.calcPosition(400, 600);
+//        corePosition.calcPosition(400, 600);
+//        corePosition.calcPosition(400, 400);
+//        corePosition.calcPosition(200, 200);
         corePosition.seeArray();
-//        for (Blockk bk : blocks) {
-//            System.out.println(bk.toString());
-//        }
+        for (Blockk bk : blocks) {
+            System.out.println(bk.toString());
+        }
 
 
     }
@@ -90,7 +94,7 @@ class CorePosition {
     private void setInPosition(int x, int y, int height, int width) {
         for (int i = x; i < x + height; i++) {
             for (int j = y; j < y + width; j++) {
-                iFreeSpace[x][y] = 1;
+                iFreeSpace[i][j] = 1;
             }
         }
 
