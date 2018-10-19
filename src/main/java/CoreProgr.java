@@ -32,9 +32,7 @@ public class CoreProgr implements Runnable {
 
     private void firstMethod() throws IOException {
 
-//        BufferedImage bufferedImage = ImageIO.read(new File("res/fone/1.jpg"));
         BufferedImage bufferedImage = new BufferedImage(1000, 1000, 1);
-//        int w = bufferedImage.getWidth();
 
         Graphics2D graphics = (Graphics2D) bufferedImage.getGraphics();
 
@@ -64,10 +62,6 @@ public class CoreProgr implements Runnable {
                 fontType = new Font("Arial Bold", Font.ROMAN_BASELINE, curentFontSize);
 
 
-//        if ((metrics.stringWidth(model) > 950) || (metrics.stringWidth(type) > 950)) {
-//            int maxSize = (metrics.stringWidth(model) > metrics.stringWidth(type)) ? metrics.stringWidth(model) : metrics.stringWidth(type);
-//            font = new Font("Arial Bold", Font.ROMAN_BASELINE, (int) ((950 * curentFontSize) / maxSize));
-//        }
         if ((metrics.stringWidth(model) > 950)) {
             fontModel = new Font("Arial Bold", Font.ROMAN_BASELINE, (int) ((950 * curentFontSize) / metrics.stringWidth(model)));
         }
@@ -76,27 +70,7 @@ public class CoreProgr implements Runnable {
             fontType = new Font("Arial Bold", Font.ROMAN_BASELINE, (int) ((950 * curentFontSize) / metrics.stringWidth(type)));
         }
 
-
-//        if ((metrics.stringWidth(model) > 900) || (metrics.stringWidth(type) > 900)) {
-//            if ((metrics.stringWidth(model) > 1000) || (metrics.stringWidth(type) > 1000)) {
-//                if ((metrics.stringWidth(model) > 1050) || (metrics.stringWidth(type) > 1050)) {
-//                    if ((metrics.stringWidth(model) > 1200) || (metrics.stringWidth(type) > 1200)) {
-//                        if ((metrics.stringWidth(model) > 1300) || (metrics.stringWidth(type) > 1300)) {
-//                            font = new Font("Arial Bold", Font.ROMAN_BASELINE, 55);
-//                        } else {
-//                            font = new Font("Arial Bold", Font.ROMAN_BASELINE, 61);
-//                        }
-//                    } else {
-//                        font = new Font("Arial Bold", Font.ROMAN_BASELINE, 76);
-//                    }
-//                } else {
-//                    font = new Font("Arial Bold", Font.ROMAN_BASELINE, 78);
-//                }
-//            } else {
-//                font = new Font("Arial Bold", Font.ROMAN_BASELINE, 82);
-//            }
         graphics.setFont(font);
-//        }
 
         metrics = graphics.getFontMetrics(font);
         if ((this.type.length() + this.model.length()) < 30) {
@@ -149,39 +123,7 @@ public class CoreProgr implements Runnable {
             for (int y = 0; y <= 800; y += 200, i++) {
                 graphics.drawImage(images[i], x, y, 200, 200, null);
             }
-
         }
-
-//        graphics.drawImage(images[0], 0, 0, 200, 200, null);
-//        graphics.drawImage(images[1], 200, 0, 200, 200, null);
-//        graphics.drawImage(images[2], 400, 0, 200, 200, null);
-//        graphics.drawImage(images[3], 600, 0, 200, 200, null);
-//        graphics.drawImage(images[4], 800, 0, 200, 200, null);
-//
-//        graphics.drawImage(images[5], 0, 200, 200, 200, null);
-//        graphics.drawImage(images[6], 200, 200, 200, 200, null);
-//        graphics.drawImage(images[7], 400, 200, 200, 200, null);
-//        graphics.drawImage(images[8], 600, 200, 200, 200, null);
-//        graphics.drawImage(images[9], 800, 200, 200, 200, null);
-//
-//        graphics.drawImage(images[10], 0, 400, 200, 200, null);
-//        graphics.drawImage(images[11], 200, 400, 200, 200, null);
-//        graphics.drawImage(images[12], 400, 400, 200, 200, null);
-//        graphics.drawImage(images[13], 600, 400, 200, 200, null);
-//        graphics.drawImage(images[14], 800, 400, 200, 200, null);
-//
-//        graphics.drawImage(images[15], 0, 600, 200, 200, null);
-//        graphics.drawImage(images[16], 200, 600, 200, 200, null);
-//        graphics.drawImage(images[17], 400, 600, 200, 200, null);
-//        graphics.drawImage(images[18], 600, 600, 200, 200, null);
-//        graphics.drawImage(images[19], 800, 600, 200, 200, null);
-//
-//        graphics.drawImage(images[20], 0, 800, 200, 200, null);
-//        graphics.drawImage(images[21], 200, 800, 200, 200, null);
-//        graphics.drawImage(images[22], 400, 800, 200, 200, null);
-//        graphics.drawImage(images[23], 600, 800, 200, 200, null);
-//        graphics.drawImage(images[24], 800, 800, 200, 200, null);
-
     }
 
     private Image[] getAllJpeg() {
@@ -189,7 +131,6 @@ public class CoreProgr implements Runnable {
 
         MyRandomArray myRandomArray = new MyRandomArray();
         int[] randomInteger = myRandomArray.getArray();
-//        ArrayList<Integer> ran-17^50 domInteger = myRandomArray.getArray();
 
         for (int i = 0; i < imagesArray.length; i++) {
             try {
