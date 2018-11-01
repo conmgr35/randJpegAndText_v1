@@ -1,7 +1,7 @@
 .idea
 *.class
 *.jpg
+*.log
 res/**
 outImages/**
 out/**
-

@@ -48,7 +48,12 @@ public class CoreProgr implements Runnable {
         }
         graphics.fillRect(0, 800, 1000, 200);
 
-        graphics.setColor(Color.WHITE);
+//        graphics.setColor(Color.WHITE);
+        graphics.setColor(Color.decode("#F5F5F5")); //silver
+//        graphics.setColor(Color.decode("#effaf6")); //green
+//        graphics.setColor(Color.decode("#f6e6e6")); //red
+
+
 
         graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.73f));
         graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
@@ -104,7 +109,7 @@ public class CoreProgr implements Runnable {
             graphics.fillRect(0, 200, 1000, 600);
             graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 
-            graphics.setColor(Color.decode("#000000"));
+            graphics.setColor(Color.decode("#444444"));
             graphics.drawString(model + " " + type, (int) ((bufferedImage.getWidth() - metrics.stringWidth(model) - metrics.stringWidth(type)) / 2), 321);
 
         } else {
@@ -112,7 +117,7 @@ public class CoreProgr implements Runnable {
             graphics.fillRect(0, 145, 1000, 655);
             graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 
-            graphics.setColor(Color.decode("#000000"));
+            graphics.setColor(Color.decode("#444444"));
 
             FontMetrics metricsFontModel = graphics.getFontMetrics(fontModel);
             graphics.setFont(fontModel);
@@ -125,10 +130,10 @@ public class CoreProgr implements Runnable {
         }
 
         graphics.setFont(font);
-        graphics.setColor(new Color(148, 2, 2).brighter());
+        graphics.setColor(Color.decode("#c15666"));
         graphics.drawString(" Е с т ь   в   н а л и ч и и", (int) ((bufferedImage.getWidth() - metrics.stringWidth("Е с т ь   в   н а л и ч и и")) / 2), 435);
 
-        graphics.setColor(Color.decode("#000000"));
+        graphics.setColor(Color.decode("#444444"));
         graphics.drawString("н а   н а ш е м   с к л а д е .", (int) ((bufferedImage.getWidth() - metrics.stringWidth("н а   н а ш е м   с к л а д е .")) / 2), 532);
         graphics.drawString("Ф о т о г р а ф и и   с к о р о ", (int) ((bufferedImage.getWidth() - metrics.stringWidth("Ф о т о г р а ф и и   с к о р о")) / 2), 636);
         graphics.drawString(" б у д у т   н а   э т о м   с а й т е.", (int) ((bufferedImage.getWidth() - metrics.stringWidth("б у д у т   н а   э т о м   с а й т е .")) / 2), 741);
