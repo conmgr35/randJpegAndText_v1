@@ -40,22 +40,31 @@ public class CoreProgr implements Runnable {
 
         setFourJpegInGraphics(graphics);
 
-        graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.2f));
-        if ((this.type.length() + this.model.length()) < 30) {
-            graphics.fillRect(0, 0, 1000, 200);
-        } else {
-            graphics.fillRect(0, 0, 1000, 145);
-        }
-        graphics.fillRect(0, 800, 1000, 200);
+//        graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
+//        if ((this.type.length() + this.model.length()) < 30) {
+//            graphics.fillRect(0, 0, 1000, 200);
+//        } else {
+//            graphics.fillRect(0, 0, 1000, 145);
+//        }
 
-//        graphics.setColor(Color.WHITE);
-        graphics.setColor(Color.decode("#F5F5F5")); //silver
+
+//        graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.2f));
+//
+//        graphics.fillRect(0, 800, 1000, 200);
+
+        graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.2f));
+
+        graphics.fillRect(0, 0, 1000, 1000);
+
+        graphics.setColor(Color.WHITE);
+//        graphics.setColor(Color.decode("#F5F5F5")); //silver
 //        graphics.setColor(Color.decode("#effaf6")); //green
 //        graphics.setColor(Color.decode("#f6e6e6")); //red
 
 
 
-        graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.73f));
+//        graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.73f)); //0.73f)
+
         graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 
         int curentFontSize = 84;        // <-  розмір шрифта міняти тут
@@ -102,6 +111,8 @@ public class CoreProgr implements Runnable {
 //            }
         graphics.setFont(font);
 //        }
+        graphics.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.85f)); //0.73f)
+
 
         metrics = graphics.getFontMetrics(font);
         if ((this.type.length() + this.model.length()) < 30) {
@@ -130,13 +141,15 @@ public class CoreProgr implements Runnable {
         }
 
         graphics.setFont(font);
-        graphics.setColor(Color.decode("#c15666"));
+        graphics.setColor(Color.decode("#c15665"));
         graphics.drawString(" Е с т ь   в   н а л и ч и и", (int) ((bufferedImage.getWidth() - metrics.stringWidth("Е с т ь   в   н а л и ч и и")) / 2), 435);
 
         graphics.setColor(Color.decode("#444444"));
         graphics.drawString("н а   н а ш е м   с к л а д е .", (int) ((bufferedImage.getWidth() - metrics.stringWidth("н а   н а ш е м   с к л а д е .")) / 2), 532);
         graphics.drawString("Ф о т о г р а ф и и   с к о р о ", (int) ((bufferedImage.getWidth() - metrics.stringWidth("Ф о т о г р а ф и и   с к о р о")) / 2), 636);
         graphics.drawString(" б у д у т   н а   э т о м   с а й т е.", (int) ((bufferedImage.getWidth() - metrics.stringWidth("б у д у т   н а   э т о м   с а й т е .")) / 2), 741);
+
+
 
 
         ImageIO.write(bufferedImage, "jpg", new File("outImages\\" + path));
